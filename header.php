@@ -4,7 +4,7 @@ echo   '<header>
 			<nav>
 				<ul class = "menu">
 					<li>
-						<a href = "homepage.php"><img src = "../Images/zombie.png"/></a>
+						<a href = "homepage.php"><img src = "../Images/zombie.png" alt = "BRAAAINZ!"></a>
 						<a href = "homepage.php">Music Zombies</a>
 					</li>
 					<li>
@@ -54,7 +54,7 @@ echo   '<header>
 						</form>
 					</li>
 				</ul>
-				<a href = "#"><img src = "../Images/cart.png" id = "cart"/></a>
+				<a href = "#"><img src = "../Images/cart.png" id = "cart" alt = "Shopping spree"/></a>
 			</nav>
 		</header>';
 ?>
