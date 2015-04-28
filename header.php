@@ -41,7 +41,7 @@ echo   '<header>
 							<li>
 								<form action="demo_form.asp">
 									Email:<input type="text" name="Log in">
-									Password:<input type="text" name="password">
+									Password:<input type="password" name="password">
 									<input type="submit" value="Enter">
 								</form>
 							</li>
