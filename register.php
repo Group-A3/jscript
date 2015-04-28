@@ -63,14 +63,14 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
  
     if (empty($error_msg)) {
         // Create a random salt
-        $random_salt = hash('hash', uniqid(mt_rand(1, mt_getrandmax()), true));
+        //$random_salt = hash('hash', uniqid(mt_rand(1, mt_getrandmax()), true));
  
         // Create salted password 
-        $password = hash('hash', $password . $random_salt);
+        $encrypt_password = md5($password);
  
         // Insert the new user into the database 
-        if ($insert_stmt = $dbconn->prepare('INSERT INTO users (username, password, email, country, salt) VALUES (?, ?, ?, ?, ?)')) {
-            $insert_stmt->bind_param('sssss', $username, $email, $password, $country, $random_salt);
+        if ($insert_stmt = $dbconn->prepare('INSERT INTO users (username, password, email, country, Admin) VALUES (?, ?, ?, ?, FALSE)')) {
+            $insert_stmt->bind_param($username, $email, $encrypt_password, $country, $admin);
             // Execute the prepared query.
             if ($insert_stmt->execute()) 
 			{

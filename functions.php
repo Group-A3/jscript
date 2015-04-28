@@ -24,15 +24,15 @@
 	fuction login($email, $password, $dbconn)
 	{
 		//using prepared statements to prevent sql injection
-		if($stmt = $dbconn->prepare('SELECT id, username, password, salt FROM users WHERE email = ? LIMIT 1'))
+		if($stmt = $dbconn->prepare('SELECT id, username, password FROM users WHERE email = ? LIMIT 1'))
 		{
 			$stmt->bind_param('s', $email);
 			$stmt->execute();
 			$stmt->store_result();
-			$stmt->bind_result($user_id, $username, $db_password, $salt);
+			$stmt->bind_result($user_id, $username, $db_password);
 			$stmt->fetch();
 			//Hashes the password with unique salt
-			$password = hash('hash',$password.$salt);
+			$password = md5($password);
 			if($stmt->num_rows==1)//Checks if the user exists
 			{
 				//Checks if password in the database matches the password submitted
@@ -41,7 +41,7 @@
 					$user_browser = $_SERVER['HTTP_USER_AGENT'];
 					$_SESSION['user_id'] = $user_id;
 					$_SESSION['username'] = $username;
-					$_SESSION['login_string'] = hash('hash', $password . $user_browser);
+					$_SESSION['login_string'] = md5($password . $user_browser);
 					//login successful
 					return true;
 				}
@@ -77,7 +77,7 @@
 				{
 					$stmt->bind_result($password);
 					$stmt->fetch();
-					$login_check = hash('hash',$password . $user_browser);
+					$login_check = md5($password . $user_browser);
 					
 					if($login_check == $login_string)
 					{
