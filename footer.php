@@ -1,6 +1,6 @@
 <?php
 echo   '<footer>
-			<!-- Footer needs to have alot more -->
+			<!-- Footer needs to have a lot more -->
 			<p>&#169; Team A3</p>
 			<br>
 			<p> About Us </p>
