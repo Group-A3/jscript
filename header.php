@@ -38,10 +38,10 @@ echo   '<header>
 						<a href="#">Sign in</a><!-- Drop down menu title-->
 						<ul>
 						<!-- Drop down menu links -->
-							<li>
+							<li >
 								<form action="demo_form.asp">
-									Email:<input type="text" name="Log in">
-									Password:<input type="password" name="password">
+									Email:<input class="bl" type="text" name="Log in">
+									Password:<input class="bl" type="password" name="password">
 									<input type="submit" value="Enter">
 								</form>
 							</li>
