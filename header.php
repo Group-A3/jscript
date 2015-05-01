@@ -58,7 +58,7 @@ echo   '<header>
 						</form>
 					</li>
 				</ul>
-				<a href = "#"><img src = "../Images/cart.png" id = "cart" alt = "Shopping spree"/></a>
+				<a href = "Shopping_Basket.php"><img src = "../Images/cart.png" id = "cart" alt = "Shopping spree"/></a>
 			</nav>
 		</header>';
 ?>
