@@ -4,7 +4,7 @@
 	function sec_session_start() //creates a secure session
 	{
 		$session_name = 'sec_session_id'; //Sets a custom session name
-		$secure = SECURE;
+		//$secure = SECURE;
 		$httponly = true;
 		//Forces session to use cookies
 		if(ini_set('session.use_only_cookies', 1)==FALSE)
@@ -15,7 +15,7 @@
 		}
 		$cookieParams = session_get_cookie_params();
 		session_get_cookie_params($cookieParams["lifetime"], $cookieParams["path"], 
-		$cookieParams["domain"], $secure, $httponly);
+		$cookieParams["domain"], $httponly);
 		session_name($session_name);
 		session_start();
 		session_regenerate_id(true);

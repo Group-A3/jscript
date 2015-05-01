@@ -24,8 +24,8 @@
 	if($count==1){
 
 		// Register $user, $pass and redirect to file "login_success.php"
-		sec_session_register("myusername");
-		sec_session_register("mypassword");
+		session_register("user");
+		session_register("pass");
 		header("location:login_success.php");
 	}
 	else {
