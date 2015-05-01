@@ -1,4 +1,7 @@
 <?php
+include_once('functions.php');
+include_once('process_login.php');
+include_once('logout.php');
 echo   '<header>
 		<!-- Main header and navigation bar with drop down menus -->
 			<nav>
@@ -39,10 +42,10 @@ echo   '<header>
 						<ul>
 						<!-- Drop down menu links -->
 							<li >
-								<form action="demo_form.asp">
-									Email:<input class="bl" type="text" name="Log in">
-									Password:<input class="bl" type="password" name="password">
-									<input type="submit" value="Enter">
+								<form action="checklogin.php" method="post" name="loginform">
+									Email:<input class="bl" type="text" name="username">
+									Password:<input class="bl" type="text" name="password">
+									<input type="submit" value="login">
 								</form>
 							</li>
 						</ul>

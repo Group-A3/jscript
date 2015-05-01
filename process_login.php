@@ -1,24 +1,16 @@
 <?php
 	include('config.php');
-	include('functions.php');
+	//include('functions.php');
 	
 	sec_session_start();
-	if(isset($_POST['email'],$_POST['p']))
-	{
-		$email = $_POST['email'];
-		$password = $_POST['p'];
-		
-		if(login($email, $password, $dbconn) == true)
-		{
-			header('Location: ../protected_page.php');
-		}
-		else
-		{
-			header('Location: ../index.php?error=1');
-		}
+	if(!session_is_registered(myusername)){
+		header("location:main_login.php");
 	}
-	else
-	{
-		echo 'Invalid Request';
-	}
+?>
+
+<html>
+	<body>
+	Login Successful
+	</body>
+</html>
 ?>
