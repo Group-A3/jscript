@@ -45,7 +45,7 @@ echo   '<header>
 							<li >
 								<form action="checklogin.php" method="post" name="loginform">
 									Email:<input class="bl" type="text" name="username">
-									Password:<input class="bl" type="text" name="password">
+									Password:<input class="bl" type="password" name="password">
 									<input type="submit" value="login">
 								</form>
 							</li>
