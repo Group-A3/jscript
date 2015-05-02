@@ -1,11 +1,22 @@
 <?php
 echo   '<footer>
 			<!-- Footer needs to have a lot more -->
-			<p>&#169; Team A3</p>
-			<br />
-			<p> About Us </p>
-			<p> Contact info </p>
-			<p> T &amp; C </p>
-			<p> Help </p>
+			<h4>&#169; Team A3</h4>
+			<nav>
+				<ul>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Contact Us</a>
+					</li>			
+					<li>
+						<a href="#">Terms &amp; Conditions</a>
+					</li>
+					<li>
+						<a href="#">Help</a>
+					</li>
+				</ul>
+			</nav>
 		</footer>';
 ?>
