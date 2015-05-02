@@ -6,20 +6,20 @@ session_start();
 echo   '<header>
 		<!-- Main header and navigation bar with drop down menus -->
 			<nav>
-				<ul class = "menu">
+				<ul class="menu">
 					<li>
-						<a href = "homepage.php"><img src = "../Images/zombie.png" alt = "BRAAAINZ!"></a>
-						<a href = "homepage.php">Music Zombies</a>
+						<a href="homepage.php"><img src="../Images/zombie.png" alt="BRAAAINZ!"></a>
+						<a href="homepage.php">Music Zombies</a>
 					</li>
 					<li>
-						<a href="#">Music</a><!-- Drop down menu title-->
+						<a href= "#">Music</a><!-- Drop down menu title-->
 						<ul>
 							<!-- Drop down menu links -->
 							<li>
-								<a href = "#">CD\'s</a><!-- # is placeholder-->
+								<a href= "#">CD\'s</a><!-- # is placeholder-->
 							</li>
 							<li>
-								<a href = "#">Digital</a><!-- # is placeholder-->
+								<a href= "#">Digital</a><!-- # is placeholder-->
 							</li>
 						</ul>
 					</li>
@@ -28,13 +28,13 @@ echo   '<header>
 						<ul>
 							<!-- Drop down menu links -->
 							<li>
-								<a href = "#">T-Shirts</a><!-- # is placeholder-->
+								<a href= "#">T-Shirts</a><!-- # is placeholder-->
 							</li>
 							<li>
-								<a href = "#">Cups</a><!-- # is placeholder-->
+								<a href= "#">Cups</a><!-- # is placeholder-->
 							</li>
 							<li>
-								<a href = "#">Posters</a><!-- # is placeholder-->
+								<a href= "#">Posters</a><!-- # is placeholder-->
 							</li>
 						</ul>
 					</li>
@@ -53,12 +53,12 @@ echo   '<header>
 					</li>
 					<li>
 						<form action="Results_Page.php" method="post">
-							<input type="text" name="field"/> <!--Hamza & Jeanette 5eva-->
+							<input type="text" name="field"/>
 							<input type="submit" name="submit" value="submit"/>
 						</form>
 					</li>
 				</ul>
-				<a href = "Shopping_Basket.php"><img src = "../Images/cart.png" id = "cart" alt = "Shopping spree"/></a>
+				<a href="Shopping_Basket.php"><img src = "../Images/cart.png" id = "cart" alt = "Shopping spree"/></a>
 			</nav>
 		</header>';
 ?>
