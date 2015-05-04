@@ -46,7 +46,7 @@ echo   '<header>
 								<form action="checklogin.php" method="post" name="loginform">
 									Email:<input class="bl" type="text" name="username">
 									Password:<input class="bl" type="password" name="password">
-									<input type="submit" value="login">
+									<input class = "othersub1" type="submit" value="login">
 								</form>
 							</li>
 						</ul>
@@ -54,7 +54,7 @@ echo   '<header>
 					<li>
 						<form action="Results_Page.php" method="post">
 							<input type="text" name="field"/>
-							<input type="submit" name="submit" value="submit"/>
+							<input class= "othersub" type="submit" name="submit" value="submit"/>
 						</form>
 					</li>
 				</ul>
